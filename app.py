@@ -22,7 +22,7 @@ def predict():
 
 	messagess = request.form['message']
 	data = [messagess]
-	vect = cv.tranform(data).toarray()
+	vect = cv.transform(data).toarray()
 	my_prediction = sgd_clf.predict(vect)
 
 	return render_template('result.html',prediction = my_prediction)
